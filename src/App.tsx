@@ -1,10 +1,10 @@
 import './App.css'
-import UserList from '../src/containers/UserProfile.tsx'
+import UserProfile from '../src/containers/UserProfile.tsx'
 
 function App() {
   return (
     <>
-      <UserList />
+      <UserProfile />
     </>
   )
 }
