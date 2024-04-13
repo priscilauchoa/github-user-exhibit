@@ -1,8 +1,14 @@
-function Button({ title }: { title: string }) {
+interface ButtonProps {
+    title: string;
+    onClick: (value: string) => void;
+}
+
+function Button({ title, onClick }: ButtonProps) {
     return (
         <>
-            <button>{title}</button>
-        </>)
+            <button onClick={onClick}>{title}</button>
+        </>
+    )
 }
 
 export default Button;
