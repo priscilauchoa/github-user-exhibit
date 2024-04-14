@@ -5,9 +5,7 @@ interface ButtonProps {
 
 function Button({ title, onClick }: ButtonProps) {
     return (
-        <>
-            <button onClick={onClick}>{title}</button>
-        </>
+        <button onClick={onClick}>{title}</button>
     )
 }
 
