@@ -2,10 +2,9 @@ interface UserDetailsProps {
     src: string;
     login: string;
     name: string;
-    error: boolean;
 }
 
-function UserDetails({ src, login, name, error }: UserDetailsProps) {
+function UserDetails({ src, login, name }: UserDetailsProps) {
     return (
         <>
             {login &&
@@ -14,7 +13,6 @@ function UserDetails({ src, login, name, error }: UserDetailsProps) {
                     <h4>Login: {login}</h4>
                     <p>Login: {name}</p>
                 </div>}
-            {!login && <h2 className='red'>{error} The user does not exist or the data was probably not available</h2>}
         </>
     )
 }
