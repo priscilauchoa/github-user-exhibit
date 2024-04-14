@@ -1,14 +1,9 @@
-import { useState } from 'react'
-
 import './App.css'
+import UserProfile from './containers/UserProfile.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(count, setCount)
   return (
-    <>
-     
-    </>
+      <UserProfile />
   )
 }
 
