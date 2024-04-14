@@ -2,8 +2,12 @@ import { useState } from "react";
 import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import fetchUsers from "../utils/fetchUsers";
-import { User } from "../interfaces/interfaces.ts"
 import UserDetails from "../components/UserDetails/UserDetails.tsx";
+
+interface User {
+  id: number;
+  valueInput?: string;
+}
 
 export default function UserProfile() {
   const [user, setUser] = useState<User[]>([]);
