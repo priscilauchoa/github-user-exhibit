@@ -15,7 +15,7 @@ interface User {
 }
 
 export default function UserProfile() {
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | undefined>();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
@@ -29,7 +29,7 @@ export default function UserProfile() {
     }
   }
 
-  async function fetchRepo(userLogin) {
+  async function fetchRepo(userLogin:string) {
     try {
       const reposData = await fetchGithubData<Repo[]>(userLogin);
       setRepos(reposData);
@@ -50,6 +50,7 @@ export default function UserProfile() {
   }
 
   const handleOnClickRepos = () => {
+    if (!user) return
     fetchRepo(`${user.login}/repos`);
   }
 
