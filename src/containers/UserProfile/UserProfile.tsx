@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Input from "../components/Input/Input";
-import Button from "../components/Button/Button";
-import fetchGithubData from "../utils/fetchGithubData.ts";
-import UserDetails from "../components/UserDetails/UserDetails.tsx";
-import UserRepos from "../components/UserRepos/UserRepos.tsx";
-import { Repo } from "../interface.ts";
+import Input from "../../components/Input/Input.tsx";
+import Button from "../../components/Button/Button.tsx";
+import fetchGithubData from "../../utils/fetchGithubData.ts";
+import UserDetails from "../../components/UserDetails/UserDetails.tsx";
+import UserRepos from "../../components/UserRepos/UserRepos.tsx";
+import { Repo } from "../../interface.ts";
 
 interface User {
   id: number;
@@ -29,7 +29,7 @@ export default function UserProfile() {
     }
   }
 
-  async function fetchRepo(userLogin:string) {
+  async function fetchRepo(userLogin: string) {
     try {
       const reposData = await fetchGithubData<Repo[]>(userLogin);
       setRepos(reposData);

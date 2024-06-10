@@ -1,5 +1,5 @@
 import './App.css'
-import UserProfile from '../src/containers/UserProfile.tsx'
+import UserProfile from './containers/UserProfile/UserProfile'
 
 function App() {
   return (
